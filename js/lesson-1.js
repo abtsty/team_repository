@@ -17,8 +17,8 @@
 
 
 ////ЗАДАЧА 3
-////ВИКОРИСТОВУЮЧИ КОНСТРУКЦІЮ IF...ELSE , НАПИШИ КОД, ЯКИЙ БУДЕ ЗАПИТУВАТИ: 
-////"СКІЛЬКИ МІСЯЦІВ МАЄ РІК", ЯКЩО КОРИСТУВАЧ ВВОДИТЬ 12 ТО У КОНСОЛІ ПИШЕ ВІРНО, ЯКЩО НЕ ПРАВИЛЬНО КОРИСТУВАЧ ВВІВ, ТОДІ У КОНСОЛІ ПИШЕ 
+////ВИКОРИСТОВУЮЧИ КОНСТРУКЦІЮ IF...ELSE , НАПИШИ КОД, ЯКИЙ БУДЕ ЗАПИТУВАТИ:
+////"СКІЛЬКИ МІСЯЦІВ МАЄ РІК", ЯКЩО КОРИСТУВАЧ ВВОДИТЬ 12 ТО У КОНСОЛІ ПИШЕ ВІРНО, ЯКЩО НЕ ПРАВИЛЬНО КОРИСТУВАЧ ВВІВ, ТОДІ У КОНСОЛІ ПИШЕ
 ////"НЕ ЗНАЄТЕ? 12"
 
 // const month = Number(prompt("How monthes in the year?"));
@@ -42,3 +42,45 @@
 //2 V
 // const newNumber = number % 2 === 0 ? true : false;
 // console.log(newNumber)
+
+// ! ЗАДАЧА 6
+//НАПИШІТЬ ПРОГРАМУ , ДЕ МИ У КОРИСТОВАЧА ПИТАЄМОСЬ МІСЯЦЬ НАРОДЖЕННЯ, І ПОКАЗУЄМО У ЯКУ ПОРУ РОКУ ВІН НАРОДИВСЯ
+let userBirthdayMonth = Number(prompt('Enter your Birthday Month:'));
+
+function birthdayMonth() {
+    // Зима
+if (userBirthdayMonth === 1 || userBirthdayMonth === 2 || userBirthdayMonth === 12) {
+    console.log('Ви народилися взимку');
+}
+// Весна
+else if (userBirthdayMonth >=  3 && userBirthdayMonth <=  5) {
+    console.log('Ви народилися на весні');
+}
+// Літо
+else if (userBirthdayMonth >=  6 && userBirthdayMonth <=  8) {
+    console.log('Ви народилися влітку');
+}
+// Осінь
+else if (userBirthdayMonth >=  9 && userBirthdayMonth <=  11) {
+    console.log('Ви народилися восени');
+}
+// Некоректне значення    
+else {
+    console.log('Ви ввели некоректне значення. Визначити пору року вашого народження неможливо!');
+    const newChack = confirm('Ви ввели некоректне значення. Визначити пору року вашого народження неможливо! Будь ласка введіть коректно місяць вашого народження');
+
+    do
+    { userBirthdayMonth = Number(prompt('Enter your Birthday Month:')); }
+    while (newChack === false)
+
+    if (newChack === true) {
+        userBirthdayMonth = Number(prompt('Enter your Birthday Month:'));
+    }
+    else {
+        confirm('Ви ввели некоректне значення. Визначити пору року вашого народження неможливо! Будь ласка введіть коректно місяць вашого народження');
+        userBirthdayMonth = Number(prompt('Enter your Birthday Month:'));
+    }
+}
+}
+
+birthdayMonth();
