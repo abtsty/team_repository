@@ -125,17 +125,39 @@
 // 1) напишіть циклом for
  const numbers = [2, 17, 94, 1, 23, 37];
 // 2) перепишіть функцією findSmallestNumber(numbers)
-console.log(findSmallestNumber([2, 17, 94, 1, 23, 37])); 
-console.log(findSmallestNumber([49, 4, 83, 7, 12]));
+// console.log(findSmallestNumber([2, 17, 94, 1, 23, 37])); 
+// console.log(findSmallestNumber([49, 4, 83, 7, 12]));
 
-function findSmallestNumber(numbers) {
+// function findSmallestNumber(numbers) {
 
-    let anotherNumber = numbers[0];
-    for (const number of numbers) {
-        if (anotherNumber > number) {
-            anotherNumber = number
-        }
+//     let anotherNumber = numbers[0];
+//     for (const number of numbers) {
+//         if (anotherNumber > number) {
+//             anotherNumber = number
+//         }
             
-    }
-    return anotherNumber
-}
+//     }
+//     return anotherNumber
+// }
+// ЗАДАЧА 5
+// Напишіть ф-цію calculateAverage() яка приймає довільну кількість аргументів і повертає їх середнє значення .Всі аргументи будуть тільки числовими
+
+// // console.log(calculateAverage(1, 2, 3, 4)); // 2.5
+// // console.log(calculateAverage(14, 8, 2)); // 8
+// // console.log(calculateAverage(27, 43, 2, 8, 36));// 23.2
+
+// ЗАДАЧА 6
+// Напишіть ф-цію greet(name) , яка при виклику буде получати імя (як приклад , "Василь"), і логінувати рядок "Привіт, <імя>".У випадку , відсутнього 
+// відсутнього значення, виводе аргумент "Привіт , гість"
+// // console.log(greet("Василь"));//Привіт Василь
+// // console.log(greet());//Привіт гість
+
+// ЗАДАЧА 7
+// Виконайте рефакторинг замінивши обявлення ф-ції з function declaration на function expression та на стрілочну функцію
+// // function checkNumbers(a, b) {
+// //   if (a > b) {
+// //     return `число ${a} більше ${b}`;
+// //   }
+
+// //   return `число ${b} більше ${a}`;
+// // }
