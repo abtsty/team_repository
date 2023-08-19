@@ -45,42 +45,68 @@
 
 // ! ЗАДАЧА 6
 //НАПИШІТЬ ПРОГРАМУ , ДЕ МИ У КОРИСТОВАЧА ПИТАЄМОСЬ МІСЯЦЬ НАРОДЖЕННЯ, І ПОКАЗУЄМО У ЯКУ ПОРУ РОКУ ВІН НАРОДИВСЯ
-let userBirthdayMonth = Number(prompt('Enter your Birthday Month:'));
+// let userBirthdayMonth = Number(prompt('Enter your Birthday Month:'));
 
-function birthdayMonth() {
-    // Зима
-if (userBirthdayMonth === 1 || userBirthdayMonth === 2 || userBirthdayMonth === 12) {
-    console.log('Ви народилися взимку');
-}
-// Весна
-else if (userBirthdayMonth >=  3 && userBirthdayMonth <=  5) {
-    console.log('Ви народилися на весні');
-}
-// Літо
-else if (userBirthdayMonth >=  6 && userBirthdayMonth <=  8) {
-    console.log('Ви народилися влітку');
-}
-// Осінь
-else if (userBirthdayMonth >=  9 && userBirthdayMonth <=  11) {
-    console.log('Ви народилися восени');
-}
-// Некоректне значення    
-else {
-    console.log('Ви ввели некоректне значення. Визначити пору року вашого народження неможливо!');
-    const newChack = confirm('Ви ввели некоректне значення. Визначити пору року вашого народження неможливо! Будь ласка введіть коректно місяць вашого народження');
+// function birthdayMonth() {
+//     // Зима
+// if (userBirthdayMonth === 1 || userBirthdayMonth === 2 || userBirthdayMonth === 12) {
+//     console.log('Ви народилися взимку');
+// }
+// // Весна
+// else if (userBirthdayMonth >=  3 && userBirthdayMonth <=  5) {
+//     console.log('Ви народилися на весні');
+// }
+// // Літо
+// else if (userBirthdayMonth >=  6 && userBirthdayMonth <=  8) {
+//     console.log('Ви народилися влітку');
+// }
+// // Осінь
+// else if (userBirthdayMonth >=  9 && userBirthdayMonth <=  11) {
+//     console.log('Ви народилися восени');
+// }
+// // Некоректне значення
+// else {
+//     console.log('Ви ввели некоректне значення. Визначити пору року вашого народження неможливо!');
+//     const newChack = confirm('Ви ввели некоректне значення. Визначити пору року вашого народження неможливо! Будь ласка введіть коректно місяць вашого народження');
 
-    do
-    { userBirthdayMonth = Number(prompt('Enter your Birthday Month:')); }
-    while (newChack === false)
+//     do
+//     { userBirthdayMonth = Number(prompt('Enter your Birthday Month:')); }
+//     while (newChack === false)
 
-    if (newChack === true) {
-        userBirthdayMonth = Number(prompt('Enter your Birthday Month:'));
-    }
-    else {
-        confirm('Ви ввели некоректне значення. Визначити пору року вашого народження неможливо! Будь ласка введіть коректно місяць вашого народження');
-        userBirthdayMonth = Number(prompt('Enter your Birthday Month:'));
-    }
-}
-}
+//     if (newChack === true) {
+//         userBirthdayMonth = Number(prompt('Enter your Birthday Month:'));
+//     }
+//     else {
+//         confirm('Ви ввели некоректне значення. Визначити пору року вашого народження неможливо! Будь ласка введіть коректно місяць вашого народження');
+//         userBirthdayMonth = Number(prompt('Enter your Birthday Month:'));
+//     }
+// }
+// }
 
-birthdayMonth();
+// birthdayMonth();
+
+// ЗАДАЧА 1
+// БАЗОВІ ОПЕРАЦІЇ З МАСИВОМ
+// 1)створіть масив styles з елементами «Джаз» і «Блюз»
+// 2)добавте «Рок-н-ролл» в кінець
+// 3)замініть значення в середині на «Классика»
+// 4)видаліть перший елемент і виведіть його в консоль
+// 5)вставте «Рэп» і «Регги» на початок масиву
+
+// МАСИВ ПО ХОДІ ВИПОВНЕННЯ ОПЕРАЦІЇ
+// Джаз, Блюз
+// Джаз, Блюз, Рок-н-ролл
+// Джаз, Классика, Рок-н-ролл
+// Классика, Рок-н-ролл
+// Рэп, Регги, Классика, Рок-н-ролл
+
+const styles = ["Джаз", "Блюз"];
+console.log(styles);
+styles.push("Рок-н-ролл");
+console.log(styles);
+styles.splice(1, 1, "Класика");
+console.log(styles);
+styles.shift();
+console.log(styles);
+styles.splice(0, 0, "Реп", "Регги");
+console.log(styles);
