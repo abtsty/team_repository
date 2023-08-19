@@ -100,13 +100,42 @@
 // Классика, Рок-н-ролл
 // Рэп, Регги, Классика, Рок-н-ролл
 
-const styles = ["Джаз", "Блюз"];
-console.log(styles);
-styles.push("Рок-н-ролл");
-console.log(styles);
-styles.splice(1, 1, "Класика");
-console.log(styles);
-styles.shift();
-console.log(styles);
-styles.splice(0, 0, "Реп", "Регги");
-console.log(styles);
+// const styles = ["Джаз", "Блюз"];
+// console.log(styles);
+// styles.push("Рок-н-ролл");
+// console.log(styles);
+// styles.splice(1, 1, "Класика");
+// console.log(styles);
+// styles.shift();
+// console.log(styles);
+// styles.splice(0, 0, "Реп", "Регги");
+// console.log(styles);
+
+// ЗАДАЧА 4
+//  Провірте , чи являється рядок полідромом
+// const str = "ротатор";//true
+// const newString = "Hello";//false
+// let word = str.split("").reverse().join("");
+// console.log(str === word);
+// let anotherWord = newString.split("").reverse().join("");
+// console.log(newString === anotherWord);
+
+// ЗАДАЧА 3
+// Напишіть код , який шукає саме найменше число в масиві
+// 1) напишіть циклом for
+ const numbers = [2, 17, 94, 1, 23, 37];
+// 2) перепишіть функцією findSmallestNumber(numbers)
+console.log(findSmallestNumber([2, 17, 94, 1, 23, 37])); 
+console.log(findSmallestNumber([49, 4, 83, 7, 12]));
+
+function findSmallestNumber(numbers) {
+
+    let anotherNumber = numbers[0];
+    for (const number of numbers) {
+        if (anotherNumber > number) {
+            anotherNumber = number
+        }
+            
+    }
+    return anotherNumber
+}
