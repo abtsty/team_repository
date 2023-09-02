@@ -24,6 +24,36 @@
 //     console.log(`${key}: ${user[key]}`);
 // }
 
+
+// ЗАДАЧА 3
+// Створи обєкт calculator(калькулятор) з 3-ма методами:
+// read()- запитує 2 значення у юзера і зберігає їх як значення обєкта;
+// sum() -повертає суму збережених значень; 
+// mult() -перемножує значення збережені і повертає результат;
+
+ const calculator = {
+ a: null,
+ b: null,
+
+     read() {
+         this.a = prompt("valueA")
+         this.b = prompt("valueB")
+  },
+
+     sum() {
+         return Number(this.a) + Number(this.b);
+  },
+
+     mult() {
+         return this.a * this.b;
+  },
+};
+
+
+calculator.read();
+console.log(`sum`, calculator.sum());
+console.log(`mult`, calculator.mult());
+
 // ЗАДАЧА 2
 // У вас є обєкт, у якому зберігаються зарплати нашої команди.
 // Напишіть код, для підрахунку всіх зарплат і збережіть результат в змінні sum
@@ -45,6 +75,7 @@
 //     return total;
 // }
 
+<<<<<<< HEAD
 // countSumSalaries(salaries);
 
 
@@ -142,3 +173,7 @@ const scientists = [
 
 const burnDataEinstein = scientists.find(({ name, surname }) => name === "Albert" && surname === "Einstein").born;
 console.log(burnDataEinstein);
+=======
+countSumSalaries(salaries);
+
+>>>>>>> edbcea3b291ce20511e57370fca6509fd011d44b
