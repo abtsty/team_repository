@@ -44,8 +44,6 @@
 // newPerson.bio();
 // newPerson.greeting();
 
-
-
 // ЗАДАЧА 2
 // Напишіть клас User для створення користувача з наступними властивостями:
 // username - імя, рядок
@@ -57,22 +55,36 @@
 
 class User {
     constructor({ username, age, numberOfPosts }) {
-        this.username = username,
-        this.age = age,
-        this.numberOfPosts = numberOfPosts   
+        (this.username = username),
+            (this.age = age),
+            (this.numberOfPosts = numberOfPosts);
     }
-    getInfo(){
-       console.log(`User ${this.username} is ${this.age} years old and has ${this.numberOfPosts} posts.`); 
+    getInfo() {
+        console.log(
+            `User ${this.username} is ${this.age} years old and has ${this.numberOfPosts} posts.`
+        );
     }
     bio = () => {
-        console.log(`User ${this.username} is ${this.age} years old and has ${this.numberOfPosts} posts.`);
-    }
+        console.log(
+            `User ${this.username} is ${this.age} years old and has ${this.numberOfPosts} posts.`
+        );
+    };
 }
 const person = new User({
     username: "Mango",
     age: 25,
-    numberOfPosts: 155,   
-})
+    numberOfPosts: 155,
+});
 console.log(person);
 person.getInfo();
 person.bio();
+
+class NewUser extends User {
+    constructor({ username, age, numberOfPosts }) {
+        super({ username, age, numberOfPosts });
+    }
+}
+
+const teacher = new NewUser({ username: "Ajax", age: 40, numberOfPosts: 78 });
+console.log(teacher);
+teacher.getInfo();
