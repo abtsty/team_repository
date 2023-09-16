@@ -43,3 +43,36 @@
 // console.log(newPerson);
 // newPerson.bio();
 // newPerson.greeting();
+
+
+
+// ЗАДАЧА 2
+// Напишіть клас User для створення користувача з наступними властивостями:
+// username - імя, рядок
+// age - вік, число
+// numberOfPosts - кількість постів, число
+// Клас очікує один параметр - об'єкт налаштувань з однойменними властивостями.
+// Добавте метод getInfo(), який повертає рядок:
+// User ${ імя } is ${ вік } years old and has ${ кількість постів } posts.
+
+class User {
+    constructor({ username, age, numberOfPosts }) {
+        this.username = username,
+        this.age = age,
+        this.numberOfPosts = numberOfPosts   
+    }
+    getInfo(){
+       console.log(`User ${this.username} is ${this.age} years old and has ${this.numberOfPosts} posts.`); 
+    }
+    bio = () => {
+        console.log(`User ${this.username} is ${this.age} years old and has ${this.numberOfPosts} posts.`);
+    }
+}
+const person = new User({
+    username: "Mango",
+    age: 25,
+    numberOfPosts: 155,   
+})
+console.log(person);
+person.getInfo();
+person.bio();
