@@ -24,31 +24,29 @@
 //     console.log(`${key}: ${user[key]}`);
 // }
 
-
 // ЗАДАЧА 3
 // Створи обєкт calculator(калькулятор) з 3-ма методами:
 // read()- запитує 2 значення у юзера і зберігає їх як значення обєкта;
-// sum() -повертає суму збережених значень; 
+// sum() -повертає суму збережених значень;
 // mult() -перемножує значення збережені і повертає результат;
 
- const calculator = {
- a: null,
- b: null,
+const calculator = {
+    a: null,
+    b: null,
 
-     read() {
-         this.a = prompt("valueA")
-         this.b = prompt("valueB")
-  },
+    read() {
+        this.a = prompt("valueA");
+        this.b = prompt("valueB");
+    },
 
-     sum() {
-         return Number(this.a) + Number(this.b);
-  },
+    sum() {
+        return Number(this.a) + Number(this.b);
+    },
 
-     mult() {
-         return this.a * this.b;
-  },
+    mult() {
+        return this.a * this.b;
+    },
 };
-
 
 calculator.read();
 console.log(`sum`, calculator.sum());
@@ -65,7 +63,7 @@ console.log(`mult`, calculator.mult());
 //    Ann: 160,
 //    Pete: 130,
 // };
- 
+
 // function countSumSalaries(teamSalaries) {
 //     let total = 0;
 //     for (sale in teamSalaries) {
@@ -75,105 +73,100 @@ console.log(`mult`, calculator.mult());
 //     return total;
 // }
 
-<<<<<<< HEAD
-// countSumSalaries(salaries);
+// <<<<<<< HEAD
+// // countSumSalaries(salaries);
 
+// // 5)відфільтрувати, хто народився в 15,16,17ст;
+// const scientists = [
+//     {
+//       name: "Albert",
+//       surname: "Einstein",
+//       born: 1879,
+//       dead: 1955,
+//       id: 1,
+//     },
+//     {
+//       name: "Isaac",
+//       surname: "Newton",
+//       born: 1643,
+//       dead: 1727,
+//       id: 2,
+//     },
+//     {
+//       name: "Galileo",
+//       surname: "Galilei",
+//       born: 1564,
+//       dead: 1642,
+//       id: 3,
+//     },
+//     {
+//       name: "Marie",
+//       surname: "Curie",
+//       born: 1867,
+//       dead: 1934,
+//       id: 4,
+//     },
+//     {
+//       name: "Johannes",
+//       surname: "Kepler",
+//       born: 1571,
+//       dead: 1630,
+//       id: 5,
+//     },
+//     {
+//       name: "Nicolaus",
+//       surname: "Copernicus",
+//       born: 1473,
+//       dead: 1543,
+//       id: 6,
+//     },
+//     {
+//       name: "Max",
+//       surname: "Planck",
+//       born: 1858,
+//       dead: 1947,
+//       id: 7,
+//     },
+//     {
+//       name: "Katherine",
+//       surname: "Blodgett",
+//       born: 1898,
+//       dead: 1979,
+//       id: 8,
+//     },
+//     {
+//       name: "Ada",
+//       surname: "Lovelace",
+//       born: 1815,
+//       dead: 1852,
+//       id: 9,
+//     },
+//     {
+//       name: "Lise",
+//       surname: "Meitner",
+//       born: 1878,
+//       dead: 1968,
+//       id: 11,
+//     },
+//     {
+//       name: "Sarah E.",
+//       surname: "Goode",
+//       born: 1855,
+//       dead: 1905,
+//       id: 10,
+//     },
+//     {
+//       name: "Hanna",
+//       surname: "Hammarström",
+//       born: 1829,
+//       dead: 1909,
+//       id: 12,
+//     },
+// ];
 
-// 5)відфільтрувати, хто народився в 15,16,17ст;
-const scientists = [
-    {
-      name: "Albert",
-      surname: "Einstein",
-      born: 1879,
-      dead: 1955,
-      id: 1,
-    },
-    {
-      name: "Isaac",
-      surname: "Newton",
-      born: 1643,
-      dead: 1727,
-      id: 2,
-    },
-    {
-      name: "Galileo",
-      surname: "Galilei",
-      born: 1564,
-      dead: 1642,
-      id: 3,
-    },
-    {
-      name: "Marie",
-      surname: "Curie",
-      born: 1867,
-      dead: 1934,
-      id: 4,
-    },
-    {
-      name: "Johannes",
-      surname: "Kepler",
-      born: 1571,
-      dead: 1630,
-      id: 5,
-    },
-    {
-      name: "Nicolaus",
-      surname: "Copernicus",
-      born: 1473,
-      dead: 1543,
-      id: 6,
-    },
-    {
-      name: "Max",
-      surname: "Planck",
-      born: 1858,
-      dead: 1947,
-      id: 7,
-    },
-    {
-      name: "Katherine",
-      surname: "Blodgett",
-      born: 1898,
-      dead: 1979,
-      id: 8,
-    },
-    {
-      name: "Ada",
-      surname: "Lovelace",
-      born: 1815,
-      dead: 1852,
-      id: 9,
-    },
-    {
-      name: "Lise",
-      surname: "Meitner",
-      born: 1878,
-      dead: 1968,
-      id: 11,
-    },
-    {
-      name: "Sarah E.",
-      surname: "Goode",
-      born: 1855,
-      dead: 1905,
-      id: 10,
-    },
-    {
-      name: "Hanna",
-      surname: "Hammarström",
-      born: 1829,
-      dead: 1909,
-      id: 12,
-    },
-];
- 
-// console.log(scientists.filter(({ born }) => born >= 1400 && born <= 1699));
+// // console.log(scientists.filter(({ born }) => born >= 1400 && born <= 1699));
 
-// 6)знайти рік народження Albert Einstein;
+// // 6)знайти рік народження Albert Einstein;
 
-const burnDataEinstein = scientists.find(({ name, surname }) => name === "Albert" && surname === "Einstein").born;
-console.log(burnDataEinstein);
-=======
-countSumSalaries(salaries);
-
->>>>>>> edbcea3b291ce20511e57370fca6509fd011d44b
+// const burnDataEinstein = scientists.find(({ name, surname }) => name === "Albert" && surname === "Einstein").born;
+// console.log(burnDataEinstein);
