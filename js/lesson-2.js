@@ -170,3 +170,10 @@ console.log(`mult`, calculator.mult());
 
 // const burnDataEinstein = scientists.find(({ name, surname }) => name === "Albert" && surname === "Einstein").born;
 // console.log(burnDataEinstein);
+
+
+
+// ЗАДАЧА 1 
+// Створіть карточки товару з масиву використовуючи createElement
+
+
